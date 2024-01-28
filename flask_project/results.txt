@@ -1,0 +1,24 @@
+
+Pretrained Model Test Acc: 92.15%
+
+
+Pretrained Model Test Acc: 91.00%
+
+
+Pretrained Model Test Acc: 92.45%
+
+
+Pretrained Model Test Acc: 88.00%
+
+
+Pretrained Model Test Acc: 88.00%
+
+
+Pretrained Model Test Acc: 92.45%
+
+
+Pretrained Model Test Acc: 92.45%
+
+
+Pretrained Model Test Acc: 92.45%
+

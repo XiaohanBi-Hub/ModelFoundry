@@ -1,0 +1,7 @@
+advertorch==0.2.3
+fvcore==0.1.5.post20220512
+matplotlib==3.4.2
+numpy==1.19.2
+pytorch==1.8.1
+torchvision==0.9.0
+tqdm==4.61.0

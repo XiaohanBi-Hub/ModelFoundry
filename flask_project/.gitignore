@@ -1,0 +1,57 @@
+# 忽略操作系统生成的文件
+.DS_Store    # MacOS文件
+Thumbs.db    # Windows文件
+
+# 忽略编程语言和框架生成的文件
+*.pyc        # Python字节码文件
+*.pyo
+*.pyd
+__pycache__/
+
+node_modules/    # Node模块文件夹
+*.class          # Java编译类文件
+
+# 忽略编辑器和IDE生成的文件
+.vscode/     # Visual Studio Code文件夹
+.idea/       # IntelliJ IDEA文件夹
+*.sublime-*  # Sublime Text文件
+*.swp        # Vim交换文件
+*~           # Emacs临时文件
+
+# 忽略构建输出目录
+/bin/
+/obj/
+/out/
+/build/
+/dist/
+
+# 忽略日志和数据库文件
+*.log
+*.sql
+*.sqlite
+
+# 忽略环境配置文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 忽略个人私密文件
+/secret/
+
+# 忽略特大文件（这里以超过100MB的文件为例）
+# 请注意，这只是一个例子，git本身不支持这种语法。
+# 您需要使用其他工具如Git LFS来处理大文件。
+*.iso
+*.tar.gz
+*.zip
+
+# 其他一些你可能想要忽略的文件或文件夹
+/backup/
+/temp/
+/tmp/
+/data/
+ILSVRC2012
+SeaM_main/ILSVRC2012
+/app/SeaM_main/ILSVRC2012
