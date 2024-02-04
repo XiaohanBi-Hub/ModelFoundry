@@ -8,21 +8,12 @@ MORE RESULTS can be seen in :
 /results/README.md
 ```
 
-Docker images can be found in:
-
-https://hub.docker.com/xxxxxx
-
-To launch docker images and save logs, use:
-
-```bas
-docker-compose up
-```
-
 ## Abstract
 
 DNN model reuse is a popular way to improve the efficiency of model construction, particularly with the massive models available on sharing platforms (e.g., HuggingFace). Recently, on-demand model reuse has drawn much attention, which aims to reduce the overhead and safety risk of model reuse via decomposing models into modules and reusing modules according to user's requirements. However, existing efforts for on-demand model reuse stop at algorithm implementations. These implementations involve ad-hoc decomposition in experiments and require considerable manual effort to adapt to new models; thus obstructing the practicality of on-demand model reuse.  In this paper, we introduceModelFoundry, a tool that systematically integrates two modularization approaches proposed in our prior work.  ModelFoundry provides automated and scalable model decomposition and module reuse functionalities, making it more practical and easily integrated into model sharing platforms. Evaluations conducted on widely used models sourced from PyTorch and GitHub platforms demonstrate thatModelFoundry achieves effective model decomposition and module reuse, as well as scalability to various models.
 
 ## Requirements
+
 **This tool should be deployed on Linux with Nvidia GPU**
 
 **For WebUI:**
@@ -49,6 +40,29 @@ DNN model reuse is a popular way to improve the efficiency of model construction
 ```
 
 ## How to use
+
+### For Docker Launch
+
+Docker images can be found in:
+
+https://hub.docker.com/repository/docker/bxh1/modelfoundry
+
+To get the docker images, run:
+
+```bash
+docker pull bxh1/modelfoundry:frontend_V2.1
+docker pull bxh1/modelfoundry:backend_V2.1
+```
+
+**Docker compose file can be found in this Repo**
+
+To launch docker images and save logs, use:
+
+```bas
+docker-compose up >logs.txt
+```
+
+### Launch from source code
 
 The tool is divided into two parts.
 
