@@ -53,6 +53,18 @@ To get the docker images, run:
 docker pull bxh1/modelfoundry:frontend_V2.1
 docker pull bxh1/modelfoundry:backend_V2.1
 ```
+**IMPORTANT:** mount the data in docker-compose.ylm volumes:
+
+```yaml
+    # Mount your data from "https://mega.nz/file/tX91ACpR#CSbQ2Xariha7_HLavE_6pKg4FoO5axOPemlv5J0JYwY" to /app/GradSplitter_main/data
+      - /data/bixh/ToolDemo_GS/GradSplitter_main/data:/app/GradSplitter_main/data
+    # Mount your data from "https://mega.nz/folder/ADMjESyC#LkCOzE0qVHs8DOXkN3l_WA" to /app/SeaM_main/data
+      - /data/bixh/ToolDemo_GS/SeaM_main/data:/app/SeaM_main/data
+    # If downloading trained models takes much time, please mount it to: /root/.cache/torch/hub/checkpoints
+      - /data/bixh/ToolDemo_GS/checkpoints:/root/.cache/torch/hub/checkpoints
+    # And please mount your Imagenet dataset to /app/SeaM_main/data/dataset
+      - /data/qibh/others/ILSVRC2012:/app/SeaM_main/ILSVRC2012
+```
 
 **Docker compose file can be found in this Repo**
 
