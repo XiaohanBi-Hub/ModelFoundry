@@ -24,7 +24,7 @@ DNN model reuse is a popular way to improve the efficiency of model construction
 
 **For server:**
 
-- Python v3.8.10
+- Python v3.9.18
 - Pytorch v1.8.1+cu111
 - Torchvision v0.9.1+cu111
 - Torchaudio v0.8.1
@@ -40,6 +40,7 @@ DNN model reuse is a popular way to improve the efficiency of model construction
 ```
 
 ## How to use
+Launch from docker image or source code!
 
 ### For Docker Launch
 
@@ -102,11 +103,12 @@ npm run serve
 cd flask_project
 ```
 
-Python 3.8 and GPU with CUDA is required.
+Python 3.9 and GPU with CUDA is required.
 
 To install requirements, run
 
 ```ba
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 ```
 
