@@ -132,6 +132,11 @@ Move [Data](https://mega.nz/folder/ADMjESyC#LkCOzE0qVHs8DOXkN3l_WA) to:
 ModelFoundry/flask_project/SeaM_main/data
 ```
 
+If functions related to ImageNet is required, please remove ImageNet dataset to 
+
+```bash
+ModelFoundry/flask_project/SeaM_main/ILSVRC2012
+```
 ## Architecture
 
 ![workflow](./img/workflow.jpg)
