@@ -69,13 +69,18 @@ docker pull bxh1/modelfoundry:backend_V2.1
 
 **Docker compose file can be found in this Repo**
 
-To launch docker images and save logs, use:
+To launch docker images and save logs, please modify the image name in docker-compose.yml, and use:
 
 ```bas
 docker-compose up >logs.txt
 ```
 
 ### Launch from source code
+
+```bash
+git clone https://github.com/1836533846/ModelFoundry
+cd ModelFoundry
+```
 
 The tool is divided into two parts.
 
