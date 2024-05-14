@@ -151,3 +151,36 @@ ModelFoundry/flask_project/SeaM_main/ILSVRC2012
 As shown in Figure below, the user interface of ModelFoundry is designed to be simple and intuitive. A user first searches for the required module and confirms which dataset the module comes from by viewing the module card. Then, the user specifies the model that needs to be decomposed. \projectName will directly evaluate the module and make download function available when the module exists. Next, the user can select the target task and click the **Modularize** button to send the task configurations to the server to execute the corresponding pipeline. The results will be sent back to the log box of the web interface, showing the evaluation of the decomposition. The decomposed modules can be downloaded by clicking **download**, or by clicking **reuse** to perform the reuse function we offer. 
 
 ![ModelFoundry](./img/ModelFoundry.jpg)
+## Results
+| **TC** | **CIFAR-10 (Acc./Wrr.)** | **CIFAR-10 (Acc./Wrr.)** | **CIFAR-10 (Acc./Wrr.)** | **SVHN (Acc./Wrr.)** | **SVHN (Acc./Wrr.)** | **SVHN (Acc./Wrr.)** |
+|:------:|:------------------------:|:------------------------:|:------------------------:|:-------------------:|:-------------------:|:-------------------:|
+|        | **InceCNN**              | **SimCNN**               | **ResCNN**               | **InceCNN**         | **SimCNN**          | **ResCNN**          |
+| 0      | 95.75/9.40               | 95.65/5.40               | 95.95/8.79               | 97.74/5.77          | 97.88/4.29          | 97.76/5.53          |
+| 1      | 98.40/5.20               | 98.30/3.47               | 98.50/5.57               | 97.63/4.97          | 97.90/3.48          | 97.75/4.10          |
+| 2      | 93.70/10.79              | 91.35/6.99               | 91.70/11.29              | 97.43/5.26          | 97.67/3.60          | 97.41/4.27          |
+| 3      | 90.80/14.10              | 88.65/7.49               | 90.75/11.92              | 95.33/6.30          | 95.35/3.99          | 95.26/5.69          |
+| 4      | 94.80/11.18              | 95.25/5.15               | 95.60/8.50               | 98.08/5.10          | 98.14/3.59          | 98.08/4.56          |
+| 5      | 92.70/12.17              | 92.55/5.97               | 93.65/9.86               | 96.96/5.92          | 97.76/4.06          | 96.96/5.50          |
+| 6      | 97.00/7.34               | 96.80/5.29               | 97.05/8.48               | 96.66/6.87          | 97.17/4.77          | 96.89/6.39          |
+| 7      | 96.45/9.66               | 95.90/5.55               | 96.25/8.59               | 97.37/6.29          | 97.97/4.58          | 97.72/5.69          |
+| 8      | 97.40/6.95               | 96.65/4.67               | 96.85/7.06               | 96.39/7.47          | 96.78/5.16          | 95.81/6.79          |
+| 9      | 97.70/6.50               | 97.55/4.39               | 97.40/6.89               | 97.05/7.20          | 96.83/5.02          | 97.37/6.60          |
+| **Avg.**| **95.47/9.33**           | **94.86/5.44**           | **95.37/8.70**           | **97.06/6.12**      | **97.35/4.25**      | **97.10/5.51**      |
+
+*The model decomposing results of \projectName with SeaM. "Acc." and "Wrr." denote the accuracy and weight retention rate of each module.*
+
+| **Dataset** | **Model Name** | **Best TM Acc. (%)** | **Composed Model Acc. (%)** | **Improvement** |
+|:-----------:|:--------------:|:--------------------:|:---------------------------:|:---------------:|
+|             |                |                      |                             |                 |
+| **CIFAR-10**|                |                      |                             |                 |
+|             | SimCNN         | 81.01                | 86.26                       | 5.25            |
+|             | ResCNN         | 81.88                | 85.95                       | 4.07            |
+|             | InceCNN        | 83.06                | 86.94                       | 3.88            |
+| **SVHN**    |                |                      |                             |                 |
+|             | SimCNN         | 87.51                | 93.12                       | 5.61            |
+|             | ResCNN         | 85.07                | 90.55                       | 5.48            |
+|             | InceCNN        | 83.19                | 90.22                       | 7.03            |
+| **Average** |                | -                    | -                           | 5.22            |
+
+*The model reuse results of \projectName regarding composing more accurate model. "TM" denotes target model.*
+
